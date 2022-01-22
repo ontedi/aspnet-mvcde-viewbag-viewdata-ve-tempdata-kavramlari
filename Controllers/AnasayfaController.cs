@@ -8,15 +8,15 @@ using Microsoft.Extensions.Logging;
 
 namespace aspnet_mvcde_viewbag_viewdata_ve_tempdata_kavramlari.Controllers
 {
-    public class AnasayfaController : Controller
+public class AnasayfaController : Controller
+{
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            ViewData["AnasayfaViewDataVerisi"] = "ViewData içerisindeki veriler";
-            ViewBag.AnasayfaViewBagVerisi = "ViewBag içerisindeki veriler";
-            TempData["AnasayfaTempDataVerisi"] = "TempData içerisindeki veriler";
-            return View();
-            //return RedirectToAction("Index", "Iletisim");
-        }
+        ViewData["AnasayfaViewDataVerisi"] = "ViewData içerisindeki veriler";
+        ViewBag.AnasayfaViewBagVerisi = "ViewBag içerisindeki veriler";
+        TempData["AnasayfaTempDataVerisi"] = "TempData içerisindeki veriler";
+        //return View();
+        return RedirectToAction("Index", "Iletisim");
     }
+}
 }
