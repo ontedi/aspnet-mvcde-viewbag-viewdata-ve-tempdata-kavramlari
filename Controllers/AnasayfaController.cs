@@ -16,6 +16,7 @@ namespace aspnet_mvcde_viewbag_viewdata_ve_tempdata_kavramlari.Controllers
             ViewBag.AnasayfaViewBagVerisi = "ViewBag içerisindeki veriler";
             TempData["AnasayfaTempDataVerisi"] = "TempData içerisindeki veriler";
             return View();
+            //return RedirectToAction("Index", "Iletisim");
         }
     }
 }
